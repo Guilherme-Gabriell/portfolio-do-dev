@@ -57,7 +57,8 @@ body{
 
 .sections {
     background-color: #000;
-    color: #FFFFFF;
+    color: #FFFFFF; 
+    padding: 0 16px;
 }
 
 section {
@@ -94,10 +95,19 @@ section {
 }
 
 .project {
-    display: flex;
     gap: 28px;
     padding: 60px 0;
     align-items: center;
+}
+
+.project-display {
+    display: flex;
+
+}
+
+.project-display-reverse {
+    display: flex;
+
 }
 
 .project-image-container {
@@ -153,6 +163,7 @@ section {
     border-radius: 10px;
     padding: 10px 38px;
     font-weight: 700;
+    text-align: center;
 }
 
 .contacts-container {
@@ -173,3 +184,56 @@ footer {
 .footer-description {
     text-align: center;
 }
+
+@media screen and (max-width: 768px) {
+    .project-display {
+        flex-direction: column;
+    }
+
+    .project-display-reverse {
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .header-links {
+        justify-content: center;
+    }
+
+    .main-section {
+        padding: 50px 16px;
+    }
+
+    .main-title {
+        font-size: 34px;
+        line-height: 40px;
+    }
+
+    .main-description {
+        font-size: 16px;
+    }
+
+    .about-description-box {
+        padding: 16px 20px;
+    }
+
+    .about-description {
+        font-size: 16px;
+    }
+
+    .project-title {
+        font-size: 32px;
+    }
+    
+    .project-buttons {
+        flex: 1;
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    .contacts-links {
+        flex-flow: wrap;
+        justify-content: center;
+    }
+}
+
